@@ -42,10 +42,10 @@ function App() {
             <Navbar></Navbar>
             <Login></Login>
           </Route>
-          <Route exact path="/checkout/:_id">
+          <PrivateRoute exact path="/checkout/:_id">
             <Navbar></Navbar>
             <Checkout></Checkout>
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
       </UserContext.Provider>

@@ -19,9 +19,6 @@ function Checkout() {
             place_id: _id,
             date: new Date()
         }
-        if(!loggedUser.email){
-            history.push('/login')
-        }else{
             fetch('http://localhost:3001/checkout', {
             method: 'POST',
             headers: {
@@ -32,11 +29,9 @@ function Checkout() {
             .then(res=> res.json())
             .then(data=> {
                 console.log(data);
-                history.push('/');
+                history.push('/orders');
             })
             .catch(err=> console.log(err))
-        }
-        
     }
 
     return (
