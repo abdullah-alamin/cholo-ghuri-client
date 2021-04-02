@@ -19,7 +19,7 @@ function Checkout() {
             place_id: _id,
             date: new Date()
         }
-            fetch('http://localhost:3001/checkout', {
+            fetch('https://thawing-woodland-74555.herokuapp.com/checkout', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
